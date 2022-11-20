@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Basic Embed</title>
+  <title>Tableau Embedding</title>
 </head>
 
 <body>
-  <script type='text/javascript' src='https://dub01.online.tableau.com/javascripts/api/viz_v1.js'></script>
-  <div class='tableauPlaceholder' style='width: 1169px; height: 4427px; display: block; margin:auto'>
-    <object class='tableauViz' width='1169' height='4427' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-      <param name='embed_code_version' value='3' />
-      <!--If you want to add non-public dashboards try to set <param name='site_root' value='' /> -->
-      <param name='name' value='$DASHBOARD' />
-      <param name='tabs' value='yes' />
-      <param name='toolbar' value='top' />
-      <param name='showAppBanner' value='true' />
-    </object>
-  </div>
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <tableau-viz id="tableauViz"
+  	src='https://public.tableau.com/views/$DASHBOARD'      
+    device="phone" toolbar="bottom" hide-tabs>
+  </tableau-viz>
 </body>
 
 </html>
